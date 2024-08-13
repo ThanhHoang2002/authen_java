@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            background-color: #e4e4e4;
+        }
+        * {
+            font-family: 'Noto Sans Lao', sans-serif !important;
+        }
+
+        .out-container {
+            width: 100%;
+            height: 100%;
+            background-color: #e4e4e4;
+            padding: 20px 10px;
+        }
+
+        .container {
+            margin: 10px auto;
+            display: table;
+            gap: 1.25rem;
+            padding: 1rem 2rem;
+            background-color: white;
+            border-style: solid;
+            border-color: #002868;
+            border-radius: 1rem;
+            border: none;
+            border-top: 5px solid;
+            max-width: 500px !important;
+        }
+
+        .lao-id-header-section {
+            margin-bottom: 20px !important;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .lao-id-header-cell {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .lao-id-header {
+            display: flex;
+        }
+
+        .logo-image {
+            height: 3rem;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 1.5rem;
+            background-position: center;
+            width: 3rem;
+        }
+
+        .lao-id-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            display: flex;
+            text-align: center;
+            vertical-align: middle;
+            margin: auto 10px;
+            color: #002868;
+        }
+
+        .bg-image {
+            height: 14rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 1.5rem;
+            background-position: center;
+            width: 100%;
+        }
+
+        .otp-intro {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .otp-section-cell {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 3rem;
+            border-radius: 1.5rem;
+            width: 100%;
+            height: 8rem;
+            background-color: #DBDBDB;
+            letter-spacing: 0.7rem;
+            font-weight: 600;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .otp-section {
+            display: inline-block;
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+
+        .margin-div {
+            margin: 20px auto;
+        }
+
+        .table-section {
+            padding: 10px
+        }
+
+        .margin-top-div {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="out-container">
+    <div class="container">
+        <table class="table-section">
+            <tr class="lao-id-header-section">
+                <td class="lao-id-header-cell">
+                    <div class="lao-id-header">
+                        <div class="logo-image" style="background-image: url('https://laoid.net/img/logo.png')">
+                        </div>
+                        <div class="lao-id-title"><strong>LaoID</strong></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="bg-image" style="background-image: url('https://laoid.net/img/email_template_image_1.png')">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="otp-intro margin-div">Gửi&nbsp;<span th:text="${username}"></span>, Mã OTP của bạn là:</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="otp-section-cell">
+                    <div class="otp-section">
+                        <div th:text="${otp}"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="text-lg margin-top-div">
+                        OTP này sẽ hết hạn sau 1 phút
+                    </div>
+                    <div class="text-lg">
+                        Vui lòng không chia sẻ mã OTP này cho bất kỳ ai!
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="text-lg margin-div">
+                        Nếu bạn không yêu cầu email này thì không có gì phải lo lắng — bạn có thể yên tâm bỏ qua nó.
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+
+</html>
